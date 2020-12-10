@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - GameRuleset</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gameruleset.foodblobmass">food​Blob​Mass</a></li><li class="variable"><a href="#gameruleset.initialplayerblobmass">initial​Player​Blob​Mass</a></li><li class="variable"><a href="#gameruleset.targettedfooddensity">targetted​Food​Density</a></li><li class="variable"><a href="#gameruleset.foodgenerationrate">food​Generation​Rate</a></li><li class="variable"><a href="#gameruleset.frictiondeceleration">friction​Deceleration</a></li><li class="variable"><a href="#gameruleset.calcradius">calc​Radius</a></li><li class="variable"><a href="#gameruleset.calcmaxacceleration">calc​Max​Acceleration</a></li><li class="variable"><a href="#gameruleset.calcmaxspeed">calc​Max​Speed</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Game​Ruleset</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">GameRuleset</span> </code></pre>
+</div>
+
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="gameruleset.foodblobmass">
+    <h3>
+        <code>food​Blob​Mass</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">foodBlobMass</span>: <span class="type">Double</span> = <span class="number literal">1</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>MassUnits</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="gameruleset.initialplayerblobmass">
+    <h3>
+        <code>initial​Player​Blob​Mass</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">initialPlayerBlobMass</span>: <span class="type">Double</span> = <span class="number literal">10</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>MassUnits</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="gameruleset.targettedfooddensity">
+    <h3>
+        <code>targetted​Food​Density</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">targettedFoodDensity</span>: <span class="type">Double</span> = <span class="number literal">1</span> / <span class="number literal">10</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Food per LengthUnit²</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="gameruleset.foodgenerationrate">
+    <h3>
+        <code>food​Generation​Rate</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">foodGenerationRate</span>: <span class="type">Double</span> = <span class="number literal">100</span> / <span class="number literal">1</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Food per TimeUnit</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="gameruleset.frictiondeceleration">
+    <h3>
+        <code>friction​Deceleration</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">frictionDeceleration</span>: <span class="type">Double</span> = <span class="number literal">10</span> / <span class="number literal">1</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>In LengthUnits per TimeUnit²</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="gameruleset.calcradius">
+    <h3>
+        <code>calc​Radius</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">calcRadius</span> </code></pre>
+</div>
+  <h4>Returns</h4>
+  <p>LengthUnits</p>
+
+</div>
+<div role="article" class="variable" id="gameruleset.calcmaxacceleration">
+    <h3>
+        <code>calc​Max​Acceleration</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">calcMaxAcceleration</span> </code></pre>
+</div>
+  <h4>Returns</h4>
+  <p>LengthUnits per TimeUnits²</p>
+
+</div>
+<div role="article" class="variable" id="gameruleset.calcmaxspeed">
+    <h3>
+        <code>calc​Max​Speed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">calcMaxSpeed</span> </code></pre>
+</div>
+  <h4>Returns</h4>
+  <p>LengthUnits per TimeUnits</p>
+
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

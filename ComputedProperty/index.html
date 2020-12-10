@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - ComputedProperty</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#computedproperty.value">Value</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#computedproperty.init(_:compute:)">init(_:​compute:​)</a></li><li class="initializer"><a href="#computedproperty.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#computedproperty.value">value</a></li><li class="variable"><a href="#computedproperty.wrappedvalue">wrapped​Value</a></li><li class="variable"><a href="#computedproperty.projectedvalue">projected​Value</a></li><li class="variable"><a href="#computedproperty.observable">observable</a></li><li class="variable"><a href="#computedproperty.compute">compute</a></li><li class="variable"><a href="#computedproperty.dependencies">dependencies</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Computed​Property</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">propertyWrapper</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="type">ComputedProperty</span>&lt;<span class="variable">V</span>&gt;: <span class="type">ObservableProperty</span>&lt;<span class="type">V</span>&gt;, <span class="type">ComputedPropertyProtocol</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/ComputedPropertyProtocol">ComputedPropertyProtocol</a></code></dt>
+<dd></dd>
+<dt class="unknown"><code>ObservableProperty&lt;V&gt;</code></dt>
+</dl>
+</section>
+    <section id="nested type aliases">
+        <h2>Nested Type Aliases</h2>
+
+        <div role="article" class="typealias" id="computedproperty.value">
+    <h3>
+        <code>Value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Value</span> = <span class="type">V</span></code></pre>
+</div>
+</div>
+    </section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="computedproperty.init(_:compute:)">
+    <h3>
+        <code>init(_:​compute:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">dependencies</span>: [<span class="type">AnyObservableProperty</span>], <span class="variable">compute</span>: <span class="attribute">@</span><span class="attribute">escaping</span> () -&gt; <span class="type">Value</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="computedproperty.init()">
+    <h3>
+        <code>init()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">init</span>() </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="computedproperty.value">
+    <h3>
+        <code>value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">value</span>: <span class="type">Value</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="computedproperty.wrappedvalue">
+    <h3>
+        <code>wrapped​Value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">wrappedValue</span>: <span class="type">Value</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="computedproperty.projectedvalue">
+    <h3>
+        <code>projected​Value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">projectedValue</span>: <span class="type">ObservableProperty</span>&lt;<span class="type">V</span>&gt; </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="computedproperty.observable">
+    <h3>
+        <code>observable</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">observable</span>: <span class="type">ObservablePropertyBinding</span>&lt;<span class="type">Value</span>&gt; </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="computedproperty.compute">
+    <h3>
+        <code>compute</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">compute</span>: () -&gt; <span class="type">Value</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="computedproperty.dependencies">
+    <h3>
+        <code>dependencies</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">dependencies</span>: [<span class="type">AnyObservableProperty</span>] </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

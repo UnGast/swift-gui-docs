@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - ObservablePropertyBinding</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#observablepropertybinding.init(parent:)">init(parent:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#observablepropertybinding.value">value</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Observable​Property​Binding</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">ObservablePropertyBinding</span>&lt;<span class="variable">V</span>&gt;: <span class="type">ObservableProperty</span>&lt;<span class="type">V</span>&gt; </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>ObservableProperty&lt;V&gt;</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="observablepropertybinding.init(parent:)">
+    <h3>
+        <code>init(parent:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>&lt;<span class="variable">P</span>: <span class="type">ObservableProtocol</span>&gt;(<span class="variable">parent</span>: <span class="type">P</span>) <span class="keyword">where</span> <span class="type">P</span>.<span class="type">Value</span> == <span class="type">Value</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="observablepropertybinding.value">
+    <h3>
+        <code>value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">value</span>: <span class="type">Value</span> </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

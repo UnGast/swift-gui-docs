@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - SingleChildWidget</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Superclass</a></li><li><a href="#relationships">Subclasses</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#singlechildwidget.child">child</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#singlechildwidget.performbuild()">perform​Build()</a></li><li class="function"><a href="#singlechildwidget.buildchild()">build​Child()</a></li><li class="function"><a href="#singlechildwidget.invalidatechild()">invalidate​Child()</a></li><li class="function"><a href="#singlechildwidget.withchildinvalidation(block:)">with​Child​Invalidation(block:​)</a></li><li class="function"><a href="#singlechildwidget.getboxconfig()">get​Box​Config()</a></li><li class="function"><a href="#singlechildwidget.performlayout(constraints:)">perform​Layout(constraints:​)</a></li><li class="function"><a href="#singlechildwidget.rendercontent()">render​Content()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Single​Child​Widget</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">class</span> <span class="type">SingleChildWidget</span>: <span class="type">Widget</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Superclass</h3>
+<dl>
+    <dt class="class"><code><a href="/Widget">Widget</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Subclasses</h3>
+<dl>
+    <dt class="class"><code><a href="/RaycastDetailView">RaycastDetailView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TwoDWorldPage">TwoDWorldPage</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/GameControlView">GameControlView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/GameRulesetEditorView">GameRulesetEditorView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/MainView">MainView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/SearchResultsView">SearchResultsView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TodoAppView">TodoAppView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TodoListItemView">TodoListItemView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TodoListView">TodoListView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Background">Background</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Border">Border</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Button">Button</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Clip">Clip</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ComputedSize">ComputedSize</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ConfigProvider">ConfigProvider</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ConstrainedSize">ConstrainedSize</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ColorPicker">ColorPicker</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ToggleButton">ToggleButton</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/DependencyProvider">DependencyProvider</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/DeveloperToolsView">DeveloperToolsView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/EventCumulationView">EventCumulationView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/EventLogView">EventLogView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/InspectorView">InspectorView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/WidgetDetailView">WidgetDetailView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/WidgetNestingView">WidgetNestingView</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Expandable">Expandable</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ForwardingObservingBuilder">ForwardingObservingBuilder</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/MaterialIcon">MaterialIcon</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Center">Center</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/List">List</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Spaceholder">Spaceholder</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/MouseArea">MouseArea</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/MouseInteraction">MouseInteraction</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ObservingBuilder">ObservingBuilder</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/Padding">Padding</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/RenderGroup">RenderGroup</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/ScrollArea">ScrollArea</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TextField">TextField</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TextInput">TextInput</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="singlechildwidget.child">
+    <h3>
+        <code>child</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">child</span>: <span class="type">Widget</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="singlechildwidget.performbuild()">
+    <h3>
+        <code>perform​Build()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">performBuild</span>() </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="singlechildwidget.buildchild()">
+    <h3>
+        <code>build​Child()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">buildChild</span>() -&gt; <span class="type">Widget</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="singlechildwidget.invalidatechild()">
+    <h3>
+        <code>invalidate​Child()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">invalidateChild</span>() </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="singlechildwidget.withchildinvalidation(block:)">
+    <h3>
+        <code>with​Child​Invalidation(block:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">withChildInvalidation</span>(<span class="variable">block</span>: () -&gt; <span class="type">Void</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="singlechildwidget.getboxconfig()">
+    <h3>
+        <code>get​Box​Config()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">getBoxConfig</span>() -&gt; <span class="type">BoxConfig</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="singlechildwidget.performlayout(constraints:)">
+    <h3>
+        <code>perform​Layout(constraints:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">performLayout</span>(<span class="variable">constraints</span>: <span class="type">BoxConstraints</span>) -&gt; <span class="type">DSize2</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="singlechildwidget.rendercontent()">
+    <h3>
+        <code>render​Content()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">renderContent</span>() -&gt; <span class="type">RenderObject</span>? </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - Root</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#root.init(rootwidget:)">init(root​Widget:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#root.bounds">bounds</a></li><li class="variable"><a href="#root.globalposition">global​Position</a></li><li class="variable"><a href="#root.rootwidget">root​Widget</a></li><li class="variable"><a href="#root.widgetcontext">widget​Context</a></li><li class="variable"><a href="#root.debuglayout">debug​Layout</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#root.setup(widgetcontext:)">setup(widget​Context:​)</a></li><li class="function"><a href="#root.layout()">layout()</a></li><li class="function"><a href="#root.consume(_:)">consume(_:​)</a></li><li class="function"><a href="#root.consume(_:)">consume(_:​)</a></li><li class="function"><a href="#root.consume(_:)">consume(_:​)</a></li><li class="function"><a href="#root.tick(_:)">tick(_:​)</a></li><li class="function"><a href="#root.render()">render()</a></li><li class="function"><a href="#root.destroy()">destroy()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Root</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">class</span> <span class="type">Root</span>: <span class="type">Parent</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/Parent">Parent</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="root.init(rootwidget:)">
+    <h3>
+        <code>init(root​Widget:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">rootWidget</span> <span class="variable">contentRootWidget</span>: <span class="type">Widget</span>) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="root.bounds">
+    <h3>
+        <code>bounds</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">bounds</span>: <span class="type">DRect</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="root.globalposition">
+    <h3>
+        <code>global​Position</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">globalPosition</span>: <span class="type">DPoint2</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="root.rootwidget">
+    <h3>
+        <code>root​Widget</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">rootWidget</span>: <span class="type">Widget</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="root.widgetcontext">
+    <h3>
+        <code>widget​Context</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">widgetContext</span>: <span class="type">WidgetContext</span>? </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="root.debuglayout">
+    <h3>
+        <code>debug​Layout</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">debugLayout</span> = <span class="keyword">false</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="root.setup(widgetcontext:)">
+    <h3>
+        <code>setup(widget​Context:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">setup</span>(<span class="variable">widgetContext</span>: <span class="type">WidgetContext</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.layout()">
+    <h3>
+        <code>layout()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">layout</span>() </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.consume(_:)">
+    <h3>
+        <code>consume(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
+  <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">consume</span>(<span class="keyword">_</span> <span class="variable">rawMouseEvent</span>: <span class="type">RawMouseEvent</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.consume(_:)">
+    <h3>
+        <code>consume(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
+  <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">consume</span>(<span class="keyword">_</span> <span class="variable">rawKeyEvent</span>: <span class="type">KeyEvent</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.consume(_:)">
+    <h3>
+        <code>consume(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span>
+  <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">consume</span>(<span class="keyword">_</span> <span class="variable">rawTextEvent</span>: <span class="type">TextEvent</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.tick(_:)">
+    <h3>
+        <code>tick(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">tick</span>(<span class="keyword">_</span> <span class="variable">tick</span>: <span class="type">Tick</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.render()">
+    <h3>
+        <code>render()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">render</span>() -&gt; <span class="type">RenderObject</span>? </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="root.destroy()">
+    <h3>
+        <code>destroy()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">destroy</span>() </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

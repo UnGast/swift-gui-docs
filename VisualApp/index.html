@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - VisualApp</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Superclass</a></li><li><a href="#relationships">Subclasses</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#visualapp.init(system:immediate:)">init(system:​immediate:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#visualapp.windowcontexts">window​Contexts</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#visualapp.createrawwindow(options:)">create​Raw​Window(options:​)</a></li><li class="function"><a href="#visualapp.createwindow(options:immediate:)">create​Window(options:​immediate:​)</a></li><li class="function"><a href="#visualapp.createrenderer(for:)">create​Renderer(for:​)</a></li><li class="function"><a href="#visualapp.createtreeslicerenderer(context:)">create​Tree​Slice​Renderer(context:​)</a></li><li class="function"><a href="#visualapp.handleontick(_:)">handle​OnTick(_:​)</a></li><li class="function"><a href="#visualapp.renderwindow(_:)">render​Window(_:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Visual​App</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">class</span> <span class="type">VisualApp</span>: <span class="type">App</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="/VisualApp_WindowContext">VisualApp.WindowContext</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Superclass</h3>
+<dl>
+    <dt class="class"><code><a href="/App">App</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Subclasses</h3>
+<dl>
+    <dt class="class"><code><a href="/SDL2OpenGL3NanoVGVisualApp">SDL2OpenGL3NanoVGVisualApp</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="visualapp.init(system:immediate:)">
+    <h3>
+        <code>init(system:​immediate:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">system</span>: <span class="type">System</span>, <span class="variable">immediate</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="visualapp.windowcontexts">
+    <h3>
+        <code>window​Contexts</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">windowContexts</span>: [<span class="type">Int</span>: <span class="type">WindowContext</span>] = [:] </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="visualapp.createrawwindow(options:)">
+    <h3>
+        <code>create​Raw​Window(options:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">createRawWindow</span>(<span class="variable">options</span>: <span class="type">Window</span>.<span class="type">Options</span>) -&gt; <span class="type">Window</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="visualapp.createwindow(options:immediate:)">
+    <h3>
+        <code>create​Window(options:​immediate:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">createWindow</span>(<span class="variable">options</span>: <span class="type">Window</span>.<span class="type">Options</span>, <span class="variable">immediate</span>: <span class="type">Bool</span> = <span class="keyword">false</span>) -&gt; <span class="type">Window</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="visualapp.createrenderer(for:)">
+    <h3>
+        <code>create​Renderer(for:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">createRenderer</span>(<span class="variable">for</span> <span class="variable">window</span>: <span class="type">Window</span>) -&gt; <span class="type">Renderer</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="visualapp.createtreeslicerenderer(context:)">
+    <h3>
+        <code>create​Tree​Slice​Renderer(context:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">createTreeSliceRenderer</span>(<span class="variable">context</span>: <span class="type">ApplicationContext</span>) -&gt; <span class="type">RenderObjectTreeSliceRenderer</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="visualapp.handleontick(_:)">
+    <h3>
+        <code>handle​OnTick(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">handleOnTick</span>(<span class="keyword">_</span> <span class="variable">tick</span>: <span class="type">Tick</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="visualapp.renderwindow(_:)">
+    <h3>
+        <code>render​Window(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">renderWindow</span>(<span class="keyword">_</span> <span class="variable">context</span>: <span class="type">WindowContext</span>) </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

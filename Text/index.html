@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - Text</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Superclass</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#text.init(_:)">init(_:​)</a></li><li class="initializer"><a href="#text.init(_:fontfamily:fontsize:fontweight:fontstyle:transform:color:wrap:)">init(_:​font​Family:​font​Size:​font​Weight:​font​Style:​transform:​color:​wrap:​)</a></li><li class="initializer"><a href="#text.init(_:fontfamily:fontsize:fontweight:fontstyle:transform:color:wrap:)">init(_:​font​Family:​font​Size:​font​Weight:​font​Style:​transform:​color:​wrap:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#text.text">text</a></li><li class="variable"><a href="#text.defaultconfig">default​Config</a></li><li class="variable"><a href="#text.localpartialconfig">local​Partial​Config</a></li><li class="variable"><a href="#text.localconfig">local​Config</a></li><li class="variable"><a href="#text.config">config</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#text.getboxconfig()">get​Box​Config()</a></li><li class="function"><a href="#text.performlayout(constraints:)">perform​Layout(constraints:​)</a></li><li class="function"><a href="#text.getsubbounds(to:)">get​Sub​Bounds(to:​)</a></li><li class="function"><a href="#text.rendercontent()">render​Content()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Text</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">class</span> <span class="type">Text</span>: <span class="type">Widget</span>, <span class="type">ConfigurableWidget</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="/Text_PartialConfig">Text.PartialConfig</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/Text_Config">Text.Config</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Superclass</h3>
+<dl>
+    <dt class="class"><code><a href="/Widget">Widget</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/ConfigurableWidget">ConfigurableWidget</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="text.init(_:)">
+    <h3>
+        <code>init(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">text</span>: <span class="type">ObservablePropertyBinding</span>&lt;<span class="type">String</span>&gt;) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="text.init(_:fontfamily:fontsize:fontweight:fontstyle:transform:color:wrap:)">
+    <h3>
+        <code>init(_:​font​Family:​font​Size:​font​Weight:​font​Style:​transform:​color:​wrap:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(
+    <span class="keyword">_</span> <span class="variable">text</span>: <span class="type">String</span>,
+    <span class="variable">fontFamily</span>: <span class="type">FontFamily</span>? = <span class="keyword">nil</span>,
+    <span class="variable">fontSize</span>: <span class="type">Double</span>? = <span class="keyword">nil</span>,
+    <span class="variable">fontWeight</span>: <span class="type">FontWeight</span>? = <span class="keyword">nil</span>,
+    <span class="variable">fontStyle</span>: <span class="type">FontStyle</span>? = <span class="keyword">nil</span>,
+    <span class="variable">transform</span>: <span class="type">TextTransform</span>? = <span class="keyword">nil</span>,
+    <span class="variable">color</span>: <span class="type">Color</span>? = <span class="keyword">nil</span>,
+    <span class="variable">wrap</span>: <span class="type">Bool</span>? = <span class="keyword">nil</span>
+  ) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="text.init(_:fontfamily:fontsize:fontweight:fontstyle:transform:color:wrap:)">
+    <h3>
+        <code>init(_:​font​Family:​font​Size:​font​Weight:​font​Style:​transform:​color:​wrap:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(
+    <span class="keyword">_</span> <span class="variable">text</span>: <span class="type">ObservablePropertyBinding</span>&lt;<span class="type">String</span>&gt;,
+    <span class="variable">fontFamily</span>: <span class="type">FontFamily</span>? = <span class="keyword">nil</span>,
+    <span class="variable">fontSize</span>: <span class="type">Double</span>? = <span class="keyword">nil</span>,
+    <span class="variable">fontWeight</span>: <span class="type">FontWeight</span>? = <span class="keyword">nil</span>,
+    <span class="variable">fontStyle</span>: <span class="type">FontStyle</span>? = <span class="keyword">nil</span>,
+    <span class="variable">transform</span>: <span class="type">TextTransform</span>? = <span class="keyword">nil</span>,
+    <span class="variable">color</span>: <span class="type">Color</span>? = <span class="keyword">nil</span>,
+    <span class="variable">wrap</span>: <span class="type">Bool</span>? = <span class="keyword">nil</span>
+  ) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="text.text">
+    <h3>
+        <code>text</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="type">ObservableProperty</span>
+  <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">text</span>: <span class="type">String</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="text.defaultconfig">
+    <h3>
+        <code>default​Config</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">var</span> <span class="variable">defaultConfig</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="text.localpartialconfig">
+    <h3>
+        <code>local​Partial​Config</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">localPartialConfig</span>: <span class="type">PartialConfig</span>?</code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="text.localconfig">
+    <h3>
+        <code>local​Config</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">localConfig</span>: <span class="type">Config</span>?</code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="text.config">
+    <h3>
+        <code>config</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">lazy</span> <span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">config</span>: <span class="type">Config</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="text.getboxconfig()">
+    <h3>
+        <code>get​Box​Config()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">getBoxConfig</span>() -&gt; <span class="type">BoxConfig</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="text.performlayout(constraints:)">
+    <h3>
+        <code>perform​Layout(constraints:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">performLayout</span>(<span class="variable">constraints</span>: <span class="type">BoxConstraints</span>) -&gt; <span class="type">DSize2</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="text.getsubbounds(to:)">
+    <h3>
+        <code>get​Sub​Bounds(to:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">getSubBounds</span>(<span class="variable">to</span> <span class="variable">index</span>: <span class="type">Int</span>) -&gt; <span class="type">DRect</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>This function is used in TextInput to get the coordinates where the caret should be displayed.</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Misc:
+TODO: maybe put this somewhere else</p>
+</li>
+</ul>
+
+</div>
+<h4>Parameters</h4>
+
+<table class="parameters">
+  <thead hidden>
+  <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <th>to</th>
+    <td><code class="type">Int</code></td>
+    <td><p>Up to which character index (including the index) to return the bounds.</p>
+</td>
+</tr>
+  </tbody>
+</table>
+  <h4>Returns</h4>
+  <p>The local bounding rect (origin: self -&gt; topLeft) up to (including) the specified index inside the text.</p>
+
+</div>
+<div role="article" class="function" id="text.rendercontent()">
+    <h3>
+        <code>render​Content()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="keyword">public</span> <span class="keyword">func</span> <span class="function">renderContent</span>() -&gt; <span class="type">RenderObject</span>? </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

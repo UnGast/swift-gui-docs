@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - GameState</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#gamestate.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#gamestate.chunks">chunks</a></li><li class="variable"><a href="#gamestate.playerblobs">player​Blobs</a></li><li class="variable"><a href="#gamestate.areabounds">area​Bounds</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#gamestate.register(buffer:)">register(buffer:​)</a></li><li class="function"><a href="#gamestate.unregister(bufferid:)">unregister(buffer​Id:​)</a></li><li class="function"><a href="#gamestate.record(event:)">record(event:​)</a></li><li class="function"><a href="#gamestate.add(blob:)">add(blob:​)</a></li><li class="function"><a href="#gamestate.add(blob:)">add(blob:​)</a></li><li class="function"><a href="#gamestate.chunkat(_:)">chunk​At(_:​)</a></li><li class="function"><a href="#gamestate.findchunks(intersecting:)">find​Chunks(intersecting:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Game​State</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">GameState</span> </code></pre>
+</div>
+
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="gamestate.init()">
+    <h3>
+        <code>init()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>() </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="gamestate.chunks">
+    <h3>
+        <code>chunks</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">chunks</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gamestate.playerblobs">
+    <h3>
+        <code>player​Blobs</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">playerBlobs</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="gamestate.areabounds">
+    <h3>
+        <code>area​Bounds</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">areaBounds</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="gamestate.register(buffer:)">
+    <h3>
+        <code>register(buffer:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">register</span>(<span class="variable">buffer</span>: <span class="type">GameEventBuffer</span>) -&gt; <span class="type">UInt</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gamestate.unregister(bufferid:)">
+    <h3>
+        <code>unregister(buffer​Id:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">unregister</span>(<span class="variable">bufferId</span>: <span class="type">UInt</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gamestate.record(event:)">
+    <h3>
+        <code>record(event:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">record</span>(<span class="variable">event</span>: <span class="type">GameEvent</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gamestate.add(blob:)">
+    <h3>
+        <code>add(blob:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">add</span>(<span class="variable">blob</span>: <span class="type">FoodBlob</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gamestate.add(blob:)">
+    <h3>
+        <code>add(blob:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">add</span>(<span class="variable">blob</span>: <span class="type">PlayerBlob</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gamestate.chunkat(_:)">
+    <h3>
+        <code>chunk​At(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">chunkAt</span>(<span class="keyword">_</span> <span class="variable">position</span>: <span class="type">DVec2</span>) -&gt; <span class="type">GameChunk</span>? </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="gamestate.findchunks(intersecting:)">
+    <h3>
+        <code>find​Chunks(intersecting:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">findChunks</span>(<span class="variable">intersecting</span> <span class="variable">selectedAreaBounds</span>: <span class="type">DRect</span>) -&gt; [<span class="type">GameChunk</span>] </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - RenderObject</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Subclasses</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#renderobject.identifiedsubtree">Identified​Sub​Tree</a></li><li class="typealias"><a href="#renderobject.container">Container</a></li><li class="typealias"><a href="#renderobject.uncachable">Uncachable</a></li><li class="typealias"><a href="#renderobject.cachesplit">Cache​Split</a></li><li class="typealias"><a href="#renderobject.renderstyle">Render​Style</a></li><li class="typealias"><a href="#renderobject.translation">Translation</a></li><li class="typealias"><a href="#renderobject.clip">Clip</a></li><li class="typealias"><a href="#renderobject.rectangle">Rectangle</a></li><li class="typealias"><a href="#renderobject.ellipse">Ellipse</a></li><li class="typealias"><a href="#renderobject.linesegment">Line​Segment</a></li><li class="typealias"><a href="#renderobject.custom">Custom</a></li><li class="typealias"><a href="#renderobject.text">Text</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#renderobject.init()">init()</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#renderobject.children">children</a></li><li class="variable"><a href="#renderobject.isbranching">is​Branching</a></li><li class="variable"><a href="#renderobject.parent">parent</a></li><li class="variable"><a href="#renderobject.bus">bus</a></li><li class="variable"><a href="#renderobject.context">context</a></li><li class="variable"><a href="#renderobject.treepath">tree​Path</a></li><li class="variable"><a href="#renderobject.hastimedrendervalue">has​Timed​Render​Value</a></li><li class="variable"><a href="#renderobject.individualhash">individual​Hash</a></li><li class="variable"><a href="#renderobject.debugdescription">debug​Description</a></li><li class="variable"><a href="#renderobject.renderstate">render​State</a></li><li class="variable"><a href="#renderobject.destroyed">destroyed</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#renderobject.mount(parent:treepath:bus:context:)">mount(parent:​tree​Path:​bus:​context:​)</a></li><li class="function"><a href="#renderobject.appendchild(_:)">append​Child(_:​)</a></li><li class="function"><a href="#renderobject.removechildren()">remove​Children()</a></li><li class="function"><a href="#renderobject.invalidatecache()">invalidate​Cache()</a></li><li class="function"><a href="#renderobject.destroy()">destroy()</a></li><li class="function"><a href="#renderobject.destroyself()">destroy​Self()</a></li><li class="function"><a href="#renderobject.objectsat(point:)">objects​At(point:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Render​Object</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">class</span> <span class="type">RenderObject</span>: <span class="type">CustomDebugStringConvertible</span>, <span class="type">TreeNode</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="class"><code><a href="/RenderObject_Bus">RenderObject.Bus</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/RenderObject_UpwardMessage">RenderObject.UpwardMessage</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="/RenderObject_UpwardMessageContent">RenderObject.UpwardMessageContent</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="/RenderObject_DownwardMessage">RenderObject.DownwardMessage</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/RenderObject_ObjectAtPointResult">RenderObject.ObjectAtPointResult</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Subclasses</h3>
+<dl>
+    <dt class="class"><code><a href="/SubTreeRenderObject">SubTreeRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/RectangleRenderObject">RectangleRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/VideoRenderObject">VideoRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/EllipsisRenderObject">EllipsisRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/LineSegmentRenderObject">LineSegmentRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/PathRenderObject">PathRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/CustomRenderObject">CustomRenderObject</a></code></dt>
+<dd></dd>
+<dt class="class"><code><a href="/TextRenderObject">TextRenderObject</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/TreeNode">TreeNode</a></code></dt>
+<dd></dd>
+<dt class="unknown"><code>CustomDebugStringConvertible</code></dt>
+</dl>
+</section>
+    <section id="nested type aliases">
+        <h2>Nested Type Aliases</h2>
+
+        <div role="article" class="typealias" id="renderobject.identifiedsubtree">
+    <h3>
+        <code>Identified​Sub​Tree</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">IdentifiedSubTree</span> = <span class="type">VisualAppBase</span>.<span class="type">IdentifiedSubTreeRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.container">
+    <h3>
+        <code>Container</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Container</span> = <span class="type">VisualAppBase</span>.<span class="type">ContainerRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.uncachable">
+    <h3>
+        <code>Uncachable</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Uncachable</span> = <span class="type">VisualAppBase</span>.<span class="type">UncachableRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.cachesplit">
+    <h3>
+        <code>Cache​Split</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">CacheSplit</span> = <span class="type">VisualAppBase</span>.<span class="type">CacheSplitRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.renderstyle">
+    <h3>
+        <code>Render​Style</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">RenderStyle</span> = <span class="type">VisualAppBase</span>.<span class="type">RenderStyleRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.translation">
+    <h3>
+        <code>Translation</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Translation</span> = <span class="type">VisualAppBase</span>.<span class="type">TranslationRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.clip">
+    <h3>
+        <code>Clip</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Clip</span> = <span class="type">VisualAppBase</span>.<span class="type">ClipRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.rectangle">
+    <h3>
+        <code>Rectangle</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Rectangle</span> = <span class="type">VisualAppBase</span>.<span class="type">RectangleRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.ellipse">
+    <h3>
+        <code>Ellipse</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Ellipse</span> = <span class="type">VisualAppBase</span>.<span class="type">EllipsisRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.linesegment">
+    <h3>
+        <code>Line​Segment</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">LineSegment</span> = <span class="type">VisualAppBase</span>.<span class="type">LineSegmentRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.custom">
+    <h3>
+        <code>Custom</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Custom</span> = <span class="type">VisualAppBase</span>.<span class="type">CustomRenderObject</span></code></pre>
+</div>
+</div>
+<div role="article" class="typealias" id="renderobject.text">
+    <h3>
+        <code>Text</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">Text</span> = <span class="type">VisualAppBase</span>.<span class="type">TextRenderObject</span></code></pre>
+</div>
+</div>
+    </section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="renderobject.init()">
+    <h3>
+        <code>init()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>() </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="renderobject.children">
+    <h3>
+        <code>children</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">internal</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">children</span>: [<span class="type">RenderObject</span>] = []</code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.isbranching">
+    <h3>
+        <code>is​Branching</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">isBranching</span>: <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.parent">
+    <h3>
+        <code>parent</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">weak</span> <span class="keyword">public</span> <span class="keyword">internal</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">parent</span>: <span class="type">RenderObject</span>? = <span class="keyword">nil</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.bus">
+    <h3>
+        <code>bus</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">bus</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.context">
+    <h3>
+        <code>context</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">context</span>: <span class="type">RenderObjectContext</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.treepath">
+    <h3>
+        <code>tree​Path</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">treePath</span>: <span class="type">TreePath</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.hastimedrendervalue">
+    <h3>
+        <code>has​Timed​Render​Value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">hasTimedRenderValue</span>: <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.individualhash">
+    <h3>
+        <code>individual​Hash</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">individualHash</span>: <span class="type">Int</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The hash for the objects properties. Excludes children.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.debugdescription">
+    <h3>
+        <code>debug​Description</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">debugDescription</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.renderstate">
+    <h3>
+        <code>render​State</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">renderState</span>: <span class="type">RenderObjectRenderState</span>? = <span class="keyword">nil</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobject.destroyed">
+    <h3>
+        <code>destroyed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">internal</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">destroyed</span> = <span class="keyword">false</span></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="renderobject.mount(parent:treepath:bus:context:)">
+    <h3>
+        <code>mount(parent:​tree​Path:​bus:​context:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">mount</span>(<span class="variable">parent</span>: <span class="type">RenderObject</span>, <span class="variable">treePath</span>: <span class="type">TreePath</span>, <span class="variable">bus</span>: <span class="type">Bus</span>, <span class="variable">context</span>: <span class="type">RenderObjectContext</span>?) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="renderobject.appendchild(_:)">
+    <h3>
+        <code>append​Child(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">appendChild</span>(<span class="keyword">_</span> <span class="variable">child</span>: <span class="type">RenderObject</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="renderobject.removechildren()">
+    <h3>
+        <code>remove​Children()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">removeChildren</span>() </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="renderobject.invalidatecache()">
+    <h3>
+        <code>invalidate​Cache()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">invalidateCache</span>() </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Notify the responsible renderer that this object needs to be rerendered
+by passing a message over the bus.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="renderobject.destroy()">
+    <h3>
+        <code>destroy()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">final</span> <span class="keyword">func</span> <span class="function">destroy</span>() </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="renderobject.destroyself()">
+    <h3>
+        <code>destroy​Self()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">open</span> <span class="keyword">func</span> <span class="function">destroySelf</span>() </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="renderobject.objectsat(point:)">
+    <h3>
+        <code>objects​At(point:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">objectsAt</span>(<span class="variable">point</span>: <span class="type">DPoint2</span>) -&gt; [<span class="type">ObjectAtPointResult</span>] </code></pre>
+</div>
+  <h4>Returns</h4>
+  <p>Self if object contains point as well as all children (deep) that contain it. // TODO: might rename to raycast() --&gt; RaycastResult</p>
+
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

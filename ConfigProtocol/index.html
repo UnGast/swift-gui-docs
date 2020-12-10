@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - ConfigProtocol</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li><li><a href="#relationships">Types Conforming to Config​Protocol</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="function"><a href="#configprotocol.merged(with:)">merged(with:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Config​Protocol</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">ConfigProtocol</span>: <span class="type">ConfigMarkerProtocol</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/ConfigMarkerProtocol">ConfigMarkerProtocol</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Types Conforming to <code>Config​Protocol</code></h3>
+<dl>
+    <dt class="structure"><code><a href="/Background_Config">Background.Config</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/Button_StateStyle">Button.StateStyle</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/Button_Config">Button.Config</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/Text_Config">Text.Config</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/MouseInteraction_Config">MouseInteraction.Config</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/TextField_Config">TextField.Config</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/TextInput_Config">TextInput.Config</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="function" id="configprotocol.merged(with:)">
+    <h3>
+        <code>merged(with:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">func</span> <span class="function">merged</span>(<span class="variable">with</span> <span class="variable">partialConfig</span>: <span class="type">PartialConfig</span>?) -&gt; <span class="keyword">Self</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Fill all the unset properties of partial with the values in default.</p>
+
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

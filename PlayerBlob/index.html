@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - PlayerBlob</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#playerblob.init(id:position:mass:radius:)">init(id:​position:​mass:​radius:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#playerblob.id">id</a></li><li class="variable"><a href="#playerblob.type">type</a></li><li class="variable"><a href="#playerblob.position">position</a></li><li class="variable"><a href="#playerblob.mass">mass</a></li><li class="variable"><a href="#playerblob.radius">radius</a></li><li class="variable"><a href="#playerblob.bounds">bounds</a></li><li class="variable"><a href="#playerblob.consumed">consumed</a></li><li class="variable"><a href="#playerblob.visiondistance">vision​Distance</a></li><li class="variable"><a href="#playerblob.fieldofvision">field​OfVision</a></li><li class="variable"><a href="#playerblob.perspective">perspective</a></li><li class="variable"><a href="#playerblob.accelerationdirection">acceleration​Direction</a></li><li class="variable"><a href="#playerblob.maxacceleration">max​Acceleration</a></li><li class="variable"><a href="#playerblob.acceleration">acceleration</a></li><li class="variable"><a href="#playerblob.speedlimit">speed​Limit</a></li><li class="variable"><a href="#playerblob.speed">speed</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Player​Blob</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">PlayerBlob</span>: <span class="type">Blob</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/Blob">Blob</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="playerblob.init(id:position:mass:radius:)">
+    <h3>
+        <code>init(id:​position:​mass:​radius:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">id</span>: <span class="type">UInt</span>, <span class="variable">position</span>: <span class="type">DVec2</span>, <span class="variable">mass</span>: <span class="type">Double</span>, <span class="variable">radius</span>: <span class="type">Double</span>) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="playerblob.id">
+    <h3>
+        <code>id</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">id</span>: <span class="type">UInt</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.type">
+    <h3>
+        <code>type</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">type</span>: <span class="type">BlobType</span> = .<span class="variable">Player</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.position">
+    <h3>
+        <code>position</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">position</span>: <span class="type">DVec2</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.mass">
+    <h3>
+        <code>mass</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">mass</span>: <span class="type">Double</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Mass. In MassUnits.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.radius">
+    <h3>
+        <code>radius</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">radius</span>: <span class="type">Double</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.bounds">
+    <h3>
+        <code>bounds</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">bounds</span>: <span class="type">DRect</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.consumed">
+    <h3>
+        <code>consumed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">consumed</span>: <span class="type">Bool</span> = <span class="keyword">false</span></code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.visiondistance">
+    <h3>
+        <code>vision​Distance</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">visionDistance</span>: <span class="type">Double</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Perpendicular distance to the sides of a square.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.fieldofvision">
+    <h3>
+        <code>field​OfVision</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">fieldOfVision</span>: <span class="type">DRect</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.perspective">
+    <h3>
+        <code>perspective</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">perspective</span>: <span class="type">GamePerspective</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.accelerationdirection">
+    <h3>
+        <code>acceleration​Direction</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">accelerationDirection</span>: <span class="type">DVec2</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.maxacceleration">
+    <h3>
+        <code>max​Acceleration</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">maxAcceleration</span>: <span class="type">Double</span> = <span class="number literal">0</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>The maximum acceleration possible.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.acceleration">
+    <h3>
+        <code>acceleration</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">acceleration</span>: <span class="type">DVec2</span> = .<span class="variable">zero</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Realised acceleration along both axes. LengthUnits per TimeUnit².</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.speedlimit">
+    <h3>
+        <code>speed​Limit</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">speedLimit</span>: <span class="type">Double</span> = <span class="number literal">0</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>0 - 1, 0 go to none of the possible speed, 1 go to the full possible speed.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="playerblob.speed">
+    <h3>
+        <code>speed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">speed</span>: <span class="type">DVec2</span> = .<span class="variable">zero</span></code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>LengthUnits per TimeUnit.</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

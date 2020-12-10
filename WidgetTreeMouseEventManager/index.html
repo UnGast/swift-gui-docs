@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - WidgetTreeMouseEventManager</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#methods">Methods</a><ul><li class="function"><a href="#widgettreemouseeventmanager.propagate(event:through:)">propagate(event:​through:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Widget​Tree​Mouse​Event​Manager</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">WidgetTreeMouseEventManager</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>There might be different approaches.</p>
+
+</div>
+
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="widgettreemouseeventmanager.propagate(event:through:)">
+    <h3>
+        <code>propagate(event:​through:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">propagate</span>(<span class="variable">event</span> <span class="variable">rawMouseEvent</span>: <span class="type">RawMouseEvent</span>, <span class="variable">through</span> <span class="variable">rootWidget</span>: <span class="type">Widget</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Returns true if the event was consumed.
+TODO: go by render objects (some render objects need an id or something like that to then find the widgets they belong to) --&gt; advantage: only click where there is content --&gt; need a &quot;sorted&quot; render object tree / composition?
+--&gt; might use the already rendered stuff and actually check the pixels for Widgets which are able to consume mouse events --&gt; for others only check layoutBounds or renderBounds</p>
+</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

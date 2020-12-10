@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - TreePath</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#treepath.init(_:)">init(_:​)</a></li><li class="initializer"><a href="#treepath.init(_:)">init(_:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#treepath.segments">segments</a></li><li class="variable"><a href="#treepath.count">count</a></li><li class="variable"><a href="#treepath.last">last</a></li><li class="variable"><a href="#treepath.debugdescription">debug​Description</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#treepath.makeiterator()">make​Iterator()</a></li><li class="function"><a href="#treepath.dropfirst(_:)">drop​First(_:​)</a></li><li class="function"><a href="#treepath.droplast(_:)">drop​Last(_:​)</a></li><li class="function"><a href="#treepath.poplast()">pop​Last()</a></li><li class="function"><a href="#treepath./(lhs:rhs:)">/(lhs:​rhs:​)</a></li><li class="function"><a href="#treepath.+(lhs:rhs:)">+(lhs:​rhs:​)</a></li><li class="function"><a href="#treepath.&lt;(lhs:rhs:)">&lt;(lhs:​rhs:​)</a></li><li class="function"><a href="#treepath.&gt;(lhs:rhs:)">&gt;(lhs:​rhs:​)</a></li><li class="function"><a href="#treepath.==(lhs:rhs:)">==(lhs:​rhs:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Structure</small>
+    <code class="name">Tree​Path</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">struct</span> <span class="type">TreePath</span>: <span class="type">Sequence</span>, <span class="type">Comparable</span>, <span class="type">Hashable</span>, <span class="type">Equatable</span>, <span class="type">CustomDebugStringConvertible</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="unknown"><code>Comparable</code></dt>
+<dt class="unknown"><code>CustomDebugStringConvertible</code></dt>
+<dt class="unknown"><code>Equatable</code></dt>
+<dt class="unknown"><code>Hashable</code></dt>
+<dt class="unknown"><code>Sequence</code></dt>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="treepath.init(_:)">
+    <h3>
+        <code>init(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">segments</span>: [<span class="type">Int</span>] = []) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="treepath.init(_:)">
+    <h3>
+        <code>init(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">segments</span>: <span class="type">Int</span>...) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="treepath.segments">
+    <h3>
+        <code>segments</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">segments</span>: [<span class="type">Int</span>]</code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="treepath.count">
+    <h3>
+        <code>count</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">count</span>: <span class="type">Int</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="treepath.last">
+    <h3>
+        <code>last</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">last</span>: <span class="type">Int</span>? </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="treepath.debugdescription">
+    <h3>
+        <code>debug​Description</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">debugDescription</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="treepath.makeiterator()">
+    <h3>
+        <code>make​Iterator()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">makeIterator</span>() -&gt; <span class="type">IndexingIterator</span>&lt;[<span class="type">Int</span>]&gt; </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="treepath.dropfirst(_:)">
+    <h3>
+        <code>drop​First(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">dropFirst</span>(<span class="keyword">_</span> <span class="variable">k</span>: <span class="type">Int</span> = <span class="number literal">1</span>) -&gt; <span class="keyword">Self</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="treepath.droplast(_:)">
+    <h3>
+        <code>drop​Last(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">dropLast</span>(<span class="keyword">_</span> <span class="variable">k</span>: <span class="type">Int</span> = <span class="number literal">1</span>) -&gt; <span class="keyword">Self</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="treepath.poplast()">
+    <h3>
+        <code>pop​Last()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">@</span><span class="attribute">discardableResult</span> <span class="keyword">public</span> <span class="attribute">mutating</span> <span class="keyword">func</span> <span class="function">popLast</span>() -&gt; <span class="type">Int</span>? </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="treepath./(lhs:rhs:)">
+    <h3>
+        <code>/(lhs:​rhs:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> / (<span class="variable">lhs</span>: <span class="keyword">Self</span>, <span class="variable">rhs</span>: <span class="type">Int</span>) -&gt; <span class="keyword">Self</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="treepath.+(lhs:rhs:)">
+    <h3>
+        <code>+(lhs:​rhs:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> + (<span class="variable">lhs</span>: <span class="keyword">Self</span>, <span class="variable">rhs</span>: <span class="type">Int</span>) -&gt; <span class="keyword">Self</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="treepath.<(lhs:rhs:)">
+    <h3>
+        <code>&lt;(lhs:​rhs:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> &lt; (<span class="variable">lhs</span>: <span class="keyword">Self</span>, <span class="variable">rhs</span>: <span class="keyword">Self</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Returns true if any component of lhs is smaller than rhs or lhs is shorter than rhs</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="treepath.>(lhs:rhs:)">
+    <h3>
+        <code>&gt;(lhs:​rhs:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> &gt; (<span class="variable">lhs</span>: <span class="keyword">Self</span>, <span class="variable">rhs</span>: <span class="keyword">Self</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Returns true if any component of lhs is bigger than rhs or lhs is longer than rhs</p>
+</li>
+</ul>
+
+</div>
+</div>
+<div role="article" class="function" id="treepath.==(lhs:rhs:)">
+    <h3>
+        <code>==(lhs:​rhs:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">func</span> == (<span class="variable">lhs</span>: <span class="keyword">Self</span>, <span class="variable">rhs</span>: <span class="keyword">Self</span>) -&gt; <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

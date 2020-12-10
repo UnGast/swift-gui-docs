@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - Blob</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Types Conforming to Blob</a></li></ul></li><li><a href="#requirements">Requirements</a><ul><li class="variable"><a href="#blob.id">id</a></li><li class="variable"><a href="#blob.type">type</a></li><li class="variable"><a href="#blob.position">position</a></li><li class="variable"><a href="#blob.mass">mass</a></li><li class="variable"><a href="#blob.radius">radius</a></li><li class="variable"><a href="#blob.consumed">consumed</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Protocol</small>
+    <code class="name">Blob</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">protocol</span> <span class="type">Blob</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Types Conforming to <code>Blob</code></h3>
+<dl>
+    <dt class="structure"><code><a href="/FoodBlob">FoodBlob</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/PlayerBlob">PlayerBlob</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+
+
+
+    <section id="requirements">
+        <h2>Requirements</h2>
+
+        <div role="article" class="variable" id="blob.id">
+    <h3>
+        <code>id</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">id</span>: <span class="type">UInt</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="blob.type">
+    <h3>
+        <code>type</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">type</span>: <span class="type">BlobType</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="blob.position">
+    <h3>
+        <code>position</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">position</span>: <span class="type">DVec2</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="blob.mass">
+    <h3>
+        <code>mass</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">mass</span>: <span class="type">Double</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Mass. In MassUnits.</p>
+
+</div>
+</div>
+<div role="article" class="variable" id="blob.radius">
+    <h3>
+        <code>radius</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">radius</span>: <span class="type">Double</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="blob.consumed">
+    <h3>
+        <code>consumed</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">var</span> <span class="variable">consumed</span>: <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

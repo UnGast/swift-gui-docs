@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - TextConfigProvider</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Superclass</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#textconfigprovider.init(config:child:)">init(config:​child:​)</a></li><li class="initializer"><a href="#textconfigprovider.init(fontfamily:fontsize:fontweight:fontstyle:transform:color:wrap:child:)">init(font​Family:​font​Size:​font​Weight:​font​Style:​transform:​color:​wrap:​child:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Text​Config​Provider</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">TextConfigProvider</span>: <span class="type">ConfigProvider</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Superclass</h3>
+<dl>
+    <dt class="class"><code><a href="/ConfigProvider">ConfigProvider</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="textconfigprovider.init(config:child:)">
+    <h3>
+        <code>init(config:​child:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">config</span>: <span class="type">Text</span>.<span class="type">PartialConfig</span>, <span class="attribute">@</span><span class="type">WidgetBuilder</span> <span class="variable">child</span> <span class="variable">childBuilder</span>: <span class="attribute">@</span><span class="attribute">escaping</span> () -&gt; <span class="type">Widget</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="textconfigprovider.init(fontfamily:fontsize:fontweight:fontstyle:transform:color:wrap:child:)">
+    <h3>
+        <code>init(font​Family:​font​Size:​font​Weight:​font​Style:​transform:​color:​wrap:​child:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(
+     
+        <span class="variable">fontFamily</span>: <span class="type">FontFamily</span>? = <span class="keyword">nil</span>,
+     
+        <span class="variable">fontSize</span>: <span class="type">Double</span>? = <span class="keyword">nil</span>,
+     
+        <span class="variable">fontWeight</span>: <span class="type">FontWeight</span>? = <span class="keyword">nil</span>,
+     
+        <span class="variable">fontStyle</span>: <span class="type">FontStyle</span>? = <span class="keyword">nil</span>,
+      
+        <span class="variable">transform</span>: <span class="type">TextTransform</span>? = <span class="keyword">nil</span>,
+    
+        <span class="variable">color</span>: <span class="type">Color</span>? = <span class="keyword">nil</span>,
+     
+        <span class="variable">wrap</span>: <span class="type">Bool</span>? = <span class="keyword">nil</span>,
+      
+        <span class="attribute">@</span><span class="type">WidgetBuilder</span> <span class="variable">child</span> <span class="variable">childBuilder</span>: <span class="attribute">@</span><span class="attribute">escaping</span> () -&gt; <span class="type">Widget</span>
+        
+        ) </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - GameEvent</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#enumeration cases">Enumeration Cases</a><ul><li class="case"><a href="#gameevent.add">Add</a></li><li class="case"><a href="#gameevent.accelerate">Accelerate</a></li><li class="case"><a href="#gameevent.move">Move</a></li><li class="case"><a href="#gameevent.grow">Grow</a></li><li class="case"><a href="#gameevent.remove">Remove</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Enumeration</small>
+    <code class="name">Game​Event</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">enum</span> <span class="type">GameEvent</span> </code></pre>
+</div>
+
+    <section id="enumeration cases">
+        <h2>Enumeration Cases</h2>
+
+        <div role="article" class="case" id="gameevent.add">
+    <h3>
+        <code>Add</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">Add</span>(<span class="variable">id</span>: <span class="type">UInt</span>, <span class="variable">type</span>: <span class="type">BlobType</span>, <span class="variable">position</span>: <span class="type">DPoint2</span>, <span class="variable">radius</span>: <span class="type">Double</span>)</code></pre>
+</div>
+</div>
+<div role="article" class="case" id="gameevent.accelerate">
+    <h3>
+        <code>Accelerate</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">Accelerate</span>(<span class="variable">id</span>: <span class="type">UInt</span>, <span class="variable">acceleration</span>: <span class="type">DVec2</span>)</code></pre>
+</div>
+</div>
+<div role="article" class="case" id="gameevent.move">
+    <h3>
+        <code>Move</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">Move</span>(<span class="variable">id</span>: <span class="type">UInt</span>, <span class="variable">position</span>: <span class="type">DPoint2</span>)</code></pre>
+</div>
+</div>
+<div role="article" class="case" id="gameevent.grow">
+    <h3>
+        <code>Grow</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">Grow</span>(<span class="variable">id</span>: <span class="type">UInt</span>, <span class="variable">radius</span>: <span class="type">Double</span>)</code></pre>
+</div>
+</div>
+<div role="article" class="case" id="gameevent.remove">
+    <h3>
+        <code>Remove</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">case</span> <span class="variable">Remove</span>(<span class="variable">id</span>: <span class="type">UInt</span>)</code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

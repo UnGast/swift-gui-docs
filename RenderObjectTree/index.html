@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - RenderObjectTree</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Nested Types</a></li><li><a href="#relationships">Superclass</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#renderobjecttree.init(_:)">init(_:​)</a></li><li class="initializer"><a href="#renderobjecttree.init(children:)">init(children:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#renderobjecttree.state">state</a></li><li class="variable"><a href="#renderobjecttree.idpaths">id​Paths</a></li><li class="variable"><a href="#renderobjecttree.hastimedrendervalue">has​Timed​Render​Value</a></li><li class="variable"><a href="#renderobjecttree.debugdescription">debug​Description</a></li><li class="variable"><a href="#renderobjecttree.individualhash">individual​Hash</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#renderobjecttree.traversedepth(onobject:)">traverse​Depth(on​Object:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Render​Object​Tree</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">RenderObjectTree</span>: <span class="type">SubTreeRenderObject</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Nested Types</h3>
+<dl>
+    <dt class="structure"><code><a href="/RenderObjectTree_State">RenderObjectTree.State</a></code></dt>
+<dd></dd>
+<dt class="enumeration"><code><a href="/RenderObjectTree_Update">RenderObjectTree.Update</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/RenderObjectTree_TreeSlice">RenderObjectTree.TreeSlice</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/RenderObjectTree_TreeSliceSequence">RenderObjectTree.TreeSliceSequence</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/RenderObjectTree_DepthFirstTreeSequence">RenderObjectTree.DepthFirstTreeSequence</a></code></dt>
+<dd></dd>
+<dt class="structure"><code><a href="/RenderObjectTree_DepthFirstTreeIterator">RenderObjectTree.DepthFirstTreeIterator</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Superclass</h3>
+<dl>
+    <dt class="class"><code><a href="/SubTreeRenderObject">SubTreeRenderObject</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="renderobjecttree.init(_:)">
+    <h3>
+        <code>init(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="keyword">_</span> <span class="variable">children</span>: [<span class="type">RenderObject</span>] = []) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="renderobjecttree.init(children:)">
+    <h3>
+        <code>init(children:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(<span class="attribute">@</span><span class="type">RenderObjectBuilder</span> <span class="variable">children</span> <span class="variable">childrenBuilder</span>: () -&gt; [<span class="type">RenderObject</span>]) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="renderobjecttree.state">
+    <h3>
+        <code>state</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">private</span>(<span class="variable">set</span>) <span class="keyword">var</span> <span class="variable">state</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobjecttree.idpaths">
+    <h3>
+        <code>id​Paths</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">idPaths</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobjecttree.hastimedrendervalue">
+    <h3>
+        <code>has​Timed​Render​Value</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">hasTimedRenderValue</span>: <span class="type">Bool</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobjecttree.debugdescription">
+    <h3>
+        <code>debug​Description</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">debugDescription</span>: <span class="type">String</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="renderobjecttree.individualhash">
+    <h3>
+        <code>individual​Hash</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">var</span> <span class="variable">individualHash</span>: <span class="type">Int</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="renderobjecttree.traversedepth(onobject:)">
+    <h3>
+        <code>traverse​Depth(on​Object:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">traverseDepth</span>(<span class="variable">onObject</span> <span class="variable">objectHandler</span>: (<span class="keyword">_</span> <span class="variable">object</span>: <span class="type">RenderObject</span>, <span class="keyword">_</span> <span class="variable">path</span>: <span class="type">TreePath</span>, <span class="keyword">_</span> <span class="variable">index</span>: <span class="type">Int</span>, <span class="keyword">_</span> <span class="variable">parentIndex</span>: <span class="type">Int</span>) <span class="keyword">throws</span> -&gt; <span class="type">Void</span>) <span class="keyword">rethrows</span> </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Fills self.idPaths with ids mapped to paths of IdentifiedSubTreeRenderObjects
+by recursively checking every child in self.children.
+Should probably only be called in init.</p>
+
+</div>
+<div class="discussion">
+    <ul>
+<li>
+<p>Warnings: Unused, untested</p>
+</li>
+</ul>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

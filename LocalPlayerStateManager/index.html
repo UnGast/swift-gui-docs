@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - LocalPlayerStateManager</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#localplayerstatemanager.init(gameprocessor:synchronize:)">init(game​Processor:​synchronize:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#localplayerstatemanager.state">state</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#localplayerstatemanager.retrieveupdates()">retrieve​Updates()</a></li><li class="function"><a href="#localplayerstatemanager.perform(action:)">perform(action:​)</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Local​Player​State​Manager</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">LocalPlayerStateManager</span>: <span class="type">PlayerStateManager</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/PlayerStateManager">PlayerStateManager</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="localplayerstatemanager.init(gameprocessor:synchronize:)">
+    <h3>
+        <code>init(game​Processor:​synchronize:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="variable">gameProcessor</span>: <span class="type">GameProcessor</span>, <span class="variable">synchronize</span>: <span class="attribute">@</span><span class="attribute">escaping</span> (<span class="keyword">_</span> <span class="variable">block</span>: () -&gt; ()) -&gt; ()) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="localplayerstatemanager.state">
+    <h3>
+        <code>state</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">let</span> <span class="variable">state</span>: <span class="type">PlayerState</span></code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="localplayerstatemanager.retrieveupdates()">
+    <h3>
+        <code>retrieve​Updates()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">retrieveUpdates</span>() </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>Synchronous. Blocked by GameProcessor updates.</p>
+
+</div>
+</div>
+<div role="article" class="function" id="localplayerstatemanager.perform(action:)">
+    <h3>
+        <code>perform(action:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">perform</span>(<span class="variable">action</span>: <span class="type">PlayerAction</span>) </code></pre>
+</div>
+<div class="summary" role="doc-abstract">
+    <p>TODO: should be asynchronous</p>
+
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>

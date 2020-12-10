@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftGUI - MouseArea</title>
+    <link rel="stylesheet" type="text/css" href="/all.css" media="all" />
+</head>
+<body>
+    <header>
+        <a href="/">
+            <strong>
+                SwiftGUI
+            </strong>
+            <span>Documentation</span>
+        </a>
+        <sup>Beta</sup>
+    </header>
+
+    <!--
+    <form class="search">
+        <input type="search" placeholder="Search" />
+    </form>
+    -->
+
+    <nav>
+        <div class="wrapper">
+            <h2>On This Page</h2>
+            <ol><li><a href="#relationships">Relationships</a><ul><li><a href="#relationships">Superclass</a></li><li><a href="#relationships">Conforms To</a></li></ul></li><li><a href="#nested type aliases">Nested Type Aliases</a><ul><li class="typealias"><a href="#mousearea.guimouseeventhandlertuple">GUIMouse​Event​Handler​Tuple</a></li></ul></li><li><a href="#initializers">Initializers</a><ul><li class="initializer"><a href="#mousearea.init(child:)">init(child:​)</a></li><li class="initializer"><a href="#mousearea.init(child:onclick:onmousebuttondown:onmousebuttonup:onmousemove:onmouseenter:onmouseleave:onmousewheel:)">init(child:​on​Click:​on​Mouse​Button​Down:​on​Mouse​Button​Up:​on​Mouse​Move:​on​Mouse​Enter:​on​Mouse​Leave:​on​Mouse​Wheel:​)</a></li></ul></li><li><a href="#properties">Properties</a><ul><li class="variable"><a href="#mousearea.onclick">on​Click</a></li><li class="variable"><a href="#mousearea.onmousebuttondown">on​Mouse​Button​Down</a></li><li class="variable"><a href="#mousearea.onmousebuttonup">on​Mouse​Button​Up</a></li><li class="variable"><a href="#mousearea.onmousemove">on​Mouse​Move</a></li><li class="variable"><a href="#mousearea.onmouseenter">on​Mouse​Enter</a></li><li class="variable"><a href="#mousearea.onmouseleave">on​Mouse​Leave</a></li><li class="variable"><a href="#mousearea.onmousewheel">on​Mouse​Wheel</a></li></ul></li><li><a href="#methods">Methods</a><ul><li class="function"><a href="#mousearea.buildchild()">build​Child()</a></li><li class="function"><a href="#mousearea.consume(_:)">consume(_:​)</a></li><li class="function"><a href="#mousearea.destroyself()">destroy​Self()</a></li></ul></li></ol>
+        </div>
+    </nav>
+
+    <main>
+        <article>
+            <h1>
+    <small>Class</small>
+    <code class="name">Mouse​Area</code>
+</h1>
+
+<div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="type">MouseArea</span>: <span class="type">SingleChildWidget</span>, <span class="type">GUIMouseEventConsumer</span> </code></pre>
+</div>
+<section id="relationships">
+    <h2 hidden>Relationships</h2>
+        
+        <h3>Superclass</h3>
+<dl>
+    <dt class="class"><code><a href="/SingleChildWidget">SingleChildWidget</a></code></dt>
+<dd></dd>
+</dl>
+<h3>Conforms To</h3>
+<dl>
+    <dt class="protocol"><code><a href="/GUIMouseEventConsumer">GUIMouseEventConsumer</a></code></dt>
+<dd></dd>
+</dl>
+</section>
+    <section id="nested type aliases">
+        <h2>Nested Type Aliases</h2>
+
+        <div role="article" class="typealias" id="mousearea.guimouseeventhandlertuple">
+    <h3>
+        <code>GUIMouse​Event​Handler​Tuple</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">typealias</span> <span class="variable">GUIMouseEventHandlerTuple</span> = (
+        <span class="variable">click</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseButtonClickEvent</span>&gt;.<span class="type">Handler</span>?,
+        <span class="variable">buttonDown</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseButtonDownEvent</span>&gt;.<span class="type">Handler</span>?,
+        <span class="variable">move</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseMoveEvent</span>&gt;.<span class="type">Handler</span>?
+    )</code></pre>
+</div>
+</div>
+    </section>
+    <section id="initializers">
+        <h2>Initializers</h2>
+
+        <div role="article" class="initializer" id="mousearea.init(child:)">
+    <h3>
+        <code>init(child:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">init</span>(<span class="attribute">@</span><span class="type">WidgetBuilder</span> <span class="variable">child</span> <span class="variable">childBuilder</span>: () -&gt; <span class="type">Widget</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="initializer" id="mousearea.init(child:onclick:onmousebuttondown:onmousebuttonup:onmousemove:onmouseenter:onmouseleave:onmousewheel:)">
+    <h3>
+        <code>init(child:​on​Click:​on​Mouse​Button​Down:​on​Mouse​Button​Up:​on​Mouse​Move:​on​Mouse​Enter:​on​Mouse​Leave:​on​Mouse​Wheel:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="attribute">convenience</span> <span class="keyword">init</span>(
+        <span class="attribute">@</span><span class="type">WidgetBuilder</span> <span class="variable">child</span> <span class="variable">childBuilder</span>: () -&gt; <span class="type">Widget</span>,
+        <span class="variable">onClick</span> <span class="variable">onClickHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseButtonClickEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>,
+        <span class="variable">onMouseButtonDown</span> <span class="variable">onMouseButtonDownHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseButtonDownEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>,
+        <span class="variable">onMouseButtonUp</span> <span class="variable">onMouseButtonUpHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseButtonUpEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>,
+        <span class="variable">onMouseMove</span> <span class="variable">onMouseMoveHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseMoveEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>,
+        <span class="variable">onMouseEnter</span> <span class="variable">onMouseEnterHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseEnterEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>,
+        <span class="variable">onMouseLeave</span> <span class="variable">onMouseLeaveHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseLeaveEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>,
+        <span class="variable">onMouseWheel</span> <span class="variable">onMouseWheelHandler</span>: <span class="type">EventHandlerManager</span>&lt;<span class="type">GUIMouseWheelEvent</span>&gt;.<span class="type">Handler</span>? = <span class="keyword">nil</span>) </code></pre>
+</div>
+</div>
+    </section>
+    <section id="properties">
+        <h2>Properties</h2>
+
+        <div role="article" class="variable" id="mousearea.onclick">
+    <h3>
+        <code>on​Click</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onClick</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mousearea.onmousebuttondown">
+    <h3>
+        <code>on​Mouse​Button​Down</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onMouseButtonDown</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mousearea.onmousebuttonup">
+    <h3>
+        <code>on​Mouse​Button​Up</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onMouseButtonUp</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mousearea.onmousemove">
+    <h3>
+        <code>on​Mouse​Move</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onMouseMove</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mousearea.onmouseenter">
+    <h3>
+        <code>on​Mouse​Enter</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onMouseEnter</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mousearea.onmouseleave">
+    <h3>
+        <code>on​Mouse​Leave</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onMouseLeave</span> </code></pre>
+</div>
+</div>
+<div role="article" class="variable" id="mousearea.onmousewheel">
+    <h3>
+        <code>on​Mouse​Wheel</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">var</span> <span class="variable">onMouseWheel</span> </code></pre>
+</div>
+</div>
+    </section>
+    <section id="methods">
+        <h2>Methods</h2>
+
+        <div role="article" class="function" id="mousearea.buildchild()">
+    <h3>
+        <code>build​Child()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">buildChild</span>() -&gt; <span class="type">Widget</span> </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="mousearea.consume(_:)">
+    <h3>
+        <code>consume(_:​)</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="keyword">public</span> <span class="keyword">func</span> <span class="function">consume</span>(<span class="keyword">_</span> <span class="variable">event</span>: <span class="type">GUIMouseEvent</span>) </code></pre>
+</div>
+</div>
+<div role="article" class="function" id="mousearea.destroyself()">
+    <h3>
+        <code>destroy​Self()</code>
+    </h3>
+    <div class="declaration">
+<pre class="highlight"><code><span class="attribute">override</span> <span class="attribute">open</span> <span class="keyword">func</span> <span class="function">destroySelf</span>() </code></pre>
+</div>
+</div>
+    </section>
+
+
+
+        </article>
+    </main>
+
+    <footer>
+        <p>
+    Generated on <time datetime="2020-12-10T22:18:37+0100">December 10, 2020</time> using <a href="https://github.com/SwiftDocOrg/swift-doc">swift-doc</a> <span class="version">1.0.0-beta.5</span>.
+</p>
+    </footer>
+</body>
+</html>
